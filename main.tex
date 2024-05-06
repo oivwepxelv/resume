@@ -1,14 +1,168 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+%%%%%%%%%%%%%%%%%
+% This resume was created using a version of altacv.cls (v1.1.4, 27 July 2018)
+% originally written by LianTze Lim (liantze@gmail.com) and modified by me, based
+% a CV created by BusinessInsider.
+%%%%%%%%%%%%%%%%
 
-\title{resume}
-\author{oivwepxelv }
-\date{May 2024}
+% Preamble
+\documentclass[8pt,a4paper]{altacv}
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato} % For pdflatex, \setmainfont{Lato} for xelatex or lualatex
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Page layout
+\geometry{
+    left=0.75in,
+    right=3.5in,
+    marginparwidth=2.5in,
+    marginparsep=0.25in,
+    top=0.75in,
+    bottom=0.75in
+}
+
+% Set colors
+\definecolor{Orange}{HTML}{FF7F00}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Orange}
+\colorlet{accent}{Orange}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Set bullets for itemize and rating marker
+% \renewcommand{\itemmarker}{\raisebox{-2pt}{\color{accent}\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
 
 \begin{document}
+    \name{Alex DeMaio}
+    % \tagline{Senior Data Engineer}
+    \personalinfo{
+        \email{oivwepxelv@gmail.com}
+        \linkedin{linkedin.com/in/oivwepxelv}
+        \github{github.com/oivwepxelv}
+        \phone{732 759-1900}
+        % \location{NYC Metropolitan Area}
+    }
+    
+    % Extend header to full width rather than half width
+    \begin{fullwidth}
+        \makecvheader
+    \end{fullwidth}    
+    
+    % Set itemize font
+    \AtBeginEnvironment{itemize}{\small}
+    
+    %%%%%%%%%%%%%%%%
+    % Begin Education
+    %%%%%%%%%%%%%%%%
+    \cvsection[rightsidebar]{Education} % Provide tex file name "page1sidebar" containing the sidebar contents
+    
+        \cvevent{Stanford University}
+                {Ph.D. student, Physics (left after earning M.S.)}
+                {2015 - 2017}
+                {Stanford, CA}
+                {}
+            
+        \cvevent{Rutgers University (Honors Program)}
+                {B.S. Mathematics (GPA 4.0 / 4.0)}
+                {2011 - 2015}
+                {New Brunswick, NJ}
+                {}
+        \vspace{-8pt} % Decrease spacing for events with same org
+        \cvevent{} % Skip duplicative org
+                {B.S. Physics (GPA 4.0 / 4.0, Highest Honors)}
+                {2011 - 2015}
+                {New Brunswick, NJ}
+                {}
+    
+    %%%%%%%%%%%%%%%%
+    % Begin Relevant Work Experience
+    %%%%%%%%%%%%%%%%
+    \cvsection{Relevant Work Experience}
+        \cvevent{Spaulding Ridge, LLC (formerly Data Clymer, LLC)}
+                {Senior Data Engineer}
+                {2024 - Present}
+                {Remote}
+                {}
+        \vspace{-8pt}
+        \cvevent{}
+                {Data Engineer}
+                {2022 - 2024}
+                {Remote}
+                {\begin{itemize}[leftmargin=0pt]
+                \renewcommand\labelitemi{}
+                    \item Created and maintained data pipelines end-to-end for clients in multiple industries (from API to warehousing, modeling, and visualization), using Python, R, Fivetran, GCP, Terraform, dbt, and Looker
+                    \vspace{1.5pt}
+                    \item {\bfseries\color{emphasis}Projects:}
+                        \begin{itemize}[leftmargin=2.25em]
+                        \smallskip
+                        \item[\raisebox{-2pt}{\color{accent}\Large\faCode}] Worked with software team, serving data for PostgreSQL- / Python-based backend web app development and pitching in as an engineering support
+                        \smallskip
+                        \item[\raisebox{-2pt}{\color{accent}\Large\faCloud}] Maintained and augmented cloud-based CRM and financial data ingestion and modeling pipelines for a venture capital firm
+                            \smallskip
+                        \item[\raisebox{-2pt}{\color{accent}\Large\faGears}] Reconstructed inefficient R-based ETL pipeline for healthcare data, using dbt and GCP
+                    \end{itemize}
+                \end{itemize}}
+            
+        \cvevent{Marmalade Labs}
+                {Data Analyst}
+                {2021-2022}
+                {Remote}
+                {\begin{itemize}[leftmargin=0pt]
+                \renewcommand\labelitemi{}
+                    \item Constructed dashboards to track website analytics and backend performance metrics using GCP, dbt, and Python; A / B tested ads; oversaw 10 annotation contractors for training model powering search
+                \end{itemize}}
+            
+    %%%%%%%%%%%%%%%%
+    % Begin Academic Research / Internship Experience
+    %%%%%%%%%%%%%%%%
+    \cvsection{Academic Research / Internship Experience}
+        \cvevent{Stanford University}
+                {Research Assistant}
+                {2015-2017}
+                {Stanford, CA}
+                {\begin{itemize}[leftmargin=0pt]
+                \renewcommand\labelitemi{}
+                    \item Quarterly lab rotations (part of Ph.D. program) in several topics, including LIGO and mathematical physics
+                \end{itemize}}
 
-\maketitle
-
-\section{Introduction}
+    \cvevent{Rutgers University}
+            {Research Assistant}
+            {2013-2015 (academic term)}
+            {New Brunswick, NJ}
+            {}
+    \vspace{-8pt}
+    \cvevent{}
+            {Research Fellow}
+            {2012}
+            {New Brunswick, NJ}
+            {\begin{itemize}[leftmargin=0pt]
+            \renewcommand\labelitemi{}
+                \item Part of the Rutgers CSM Heavy-Ion Group, worked with PbPb and pPb LHC collision data and various types of simulated pp collisions (using C++ / ROOT) to do a variety of things, including gauging bias introduced by the muon trigger in the LHC
+            \end{itemize}}
+    
+    \cvevent{CERN}
+            {Research Fellow}
+            {2014}
+            {Geneva, Switzerland}
+            {\begin{itemize}[leftmargin=0pt]
+            \renewcommand\labelitemi{}
+                \item {\color{emphasis}One of 15 students in the USA selected for NSF-funded travel, board, research, and coursework at the CERN facility in Geneva for the summer}
+                \item Worked with the Beams Group to produce LHC beam optics visualizations for the collaboration
+            \end{itemize}}
+    
+    \cvevent{Caltech}
+            {Research Fellow}
+            {Summer 2013}
+            {Pasadena, CA}
+            {\begin{itemize}[leftmargin=0pt]
+            \renewcommand\labelitemi{}
+                \item {\color{emphasis}One of $\sim$30 students in the USA funded by Caltech to travel to campus and conduct gravitational-wave research for the summer}
+                \item Our group (part of the Caltech Theoretical Astrophysics Group) wrote and ran simulations of core-collapse supernovae (CCSN), then inferred CCSN properties from the resulting gravitational waveform data using matched filtering analysis and Bayesian model selection
+                \end{itemize}}
 
 \end{document}
