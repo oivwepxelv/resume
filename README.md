@@ -1,3 +1,3 @@
 # resume
 
-Compiled and synced using Overleaf.
+Compile with pdfLaTeX.
