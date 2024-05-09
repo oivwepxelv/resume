@@ -8,9 +8,10 @@
 \documentclass[8pt,a4paper]{altacv}
 
 % Packages
-\usepackage[T1]{fontenc}
-\usepackage[default]{lato} % For pdflatex, \setmainfont{Lato} for xelatex or lualatex
 \usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[default]{lato} % For pdflatex, \setmainfont{Lato} for xelatex or lualatex
 \usepackage{xcolor}
 
 % Page layout
@@ -36,15 +37,24 @@
 % \renewcommand{\itemmarker}{\raisebox{-2pt}{\color{accent}\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
+% Set hyperlink formatting
+% \hypersetup{
+%     colorlinks=false,
+%     pdfborderstyle={/S/U/W 0.1},
+%     linkbordercolor=body!30,
+%     urlbordercolor=body!30,
+%     citebordercolor=body!30,
+% }
+
 
 \begin{document}
     \name{Alex DeMaio}
     % \tagline{Senior Data Engineer}
     \personalinfo{
-        \email{oivwepxelv@gmail.com}
-        \linkedin{linkedin.com/in/oivwepxelv}
-        \github{github.com/oivwepxelv}
-        \phone{732 759-1900}
+        \email{\href{mailto:oivwepxelv@gmail.com}{oivwepxelv@gmail.com}}
+        \linkedin{\href{https://www.linkedin.com/in/oivwepxelv}{linkedin.com/in/oivwepxelv}}
+        \github{\href{https://www.github.com/oivwepxelv}{github.com/oivwepxelv}}
+        \phone{\href{tel:+17327591900}{732 759-1900}}
         % \location{NYC Metropolitan Area}
     }
     
